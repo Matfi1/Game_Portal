@@ -109,16 +109,18 @@ body {
 header {
     background-color: #2c3e50;
     color: white;
-    padding: 20px;
+    padding: 10px 0; /* Уменьшен отступ сверху и снизу для мобильных устройств */
     text-align: center;
     position: fixed;
     width: 100%;
     top: 0;
+    left: 0;
     z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Добавлено тень для лучшей видимости */
 }
 
 .logo {
-    font-size: 32px;
+    font-size: 24px; /* Уменьшен размер шрифта для мобильных устройств */
     font-weight: bold;
     letter-spacing: 1px;
 }
@@ -127,102 +129,100 @@ nav ul {
     list-style: none;
     padding: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin-top: 10px;
 }
 
 nav ul li {
-    margin: 0 20px;
+    margin: 5px 0; /* Уменьшены отступы для мобильных устройств */
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px; /* Уменьшен размер шрифта для мобильных устройств */
     font-weight: 500;
-}
-
-.auth-buttons {
-    margin-top: 15px;
 }
 
 /* Герой */
 .hero {
     background: url('https://images.unsplash.com/photo-1516454485007-d72cb4b3ed76?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGJhY2tncm91bmR8ZW58MHx8fDE2NjM2MjMxMjc&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center/cover;
-    height: 400px;
+    height: 300px; /* Уменьшен высота для мобильных устройств */
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     text-align: center;
-    margin-top: 80px;
+    margin-top: 60px; /* Уменьшен отступ сверху */
     position: relative;
 }
 
 .hero-content {
     background-color: rgba(0, 0, 0, 0.6);
-    padding: 40px;
+    padding: 20px;
     border-radius: 15px;
     animation: fadeInUp 0.6s ease-out;
 }
 
 .hero-content h1 {
-    font-size: 50px;
+    font-size: 32px; /* Уменьшен размер шрифта для мобильных устройств */
     color: #f0f2f5;
     margin-bottom: 10px;
 }
 
 .hero-content p {
-    font-size: 26px;
+    font-size: 18px; /* Уменьшен размер шрифта для мобильных устройств */
     color: #d0d0d0;
 }
 
 /* Категории и популярные игры */
 .categories, .popular-games {
-    padding: 60px 20px;
+    padding: 40px 10px; /* Уменьшены отступы для мобильных устройств */
     background-color: #ffffff;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1000px; /* Уменьшен максимальная ширина для мобильных устройств */
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 10px; /* Уменьшены отступы */
 }
 
 .category-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 15px; /* Уменьшен промежуток между карточками */
 }
 
 .category-card {
-    flex: 1 1 calc(25% - 30px);
+    flex: 1 1 calc(50% - 15px); /* Изменен размер карточек для мобильных устройств */
     background-color: #f4f4f4;
     border-radius: 10px;
-    padding: 20px;
+    padding: 15px; /* Уменьшен отступ внутри карточки */
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Уменьшена тень */
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .category-icon {
-    font-size: 50px;
+    font-size: 40px; /* Уменьшен размер иконок для мобильных устройств */
     margin-bottom: 10px;
 }
 
 .game-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 15px; /* Уменьшены промежуток между играми */
     justify-content: center;
 }
 
 .game {
-    width: 300px;
+    width: 100%; /* Сделан адаптивным */
+    max-width: 300px;
     text-align: center;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Уменьшена тень */
 }
 
 .game img {
@@ -232,21 +232,21 @@ nav ul li a {
 
 .game h3 {
     margin: 10px 0;
-    font-size: 24px;
+    font-size: 20px; /* Уменьшен размер шрифта */
 }
 
 /* Нижний колонтитул */
 footer {
     background-color: #2c3e50;
     color: white;
-    padding: 20px 0;
+    padding: 10px 0; /* Уменьшен отступ сверху и снизу */
     text-align: center;
-    margin-top: 40px;
+    margin-top: 20px; /* Уменьшен отступ сверху */
 }
 
 .social-icons img {
-    width: 30px;
-    margin: 0 10px;
+    width: 24px; /* Уменьшен размер иконок */
+    margin: 0 5px; /* Уменьшены отступы */
 }
 
 /* Стили для форм */
@@ -254,46 +254,46 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 80px);
+    min-height: calc(100vh - 60px); /* Уменьшен отступ снизу */
     background-color: #f7f9fc;
 }
 
 .form-container {
-    max-width: 400px;
+    max-width: 100%; /* Адаптивная ширина */
     width: 100%;
-    padding: 30px;
+    padding: 20px; /* Уменьшены отступы */
     background-color: white;
     border-radius: 15px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Уменьшена тень */
     animation: fadeIn 0.6s ease-out;
 }
 
 .form-container h2 {
-    margin-bottom: 20px;
-    font-size: 32px;
+    margin-bottom: 15px; /* Уменьшен отступ снизу */
+    font-size: 24px; /* Уменьшен размер шрифта */
     color: #333;
     text-align: center;
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Уменьшен отступ снизу */
 }
 
 .form-group label {
     display: block;
     margin-bottom: 5px;
-    font-size: 16px;
+    font-size: 14px; /* Уменьшен размер шрифта */
 }
 
-.form-group input, .form-group textarea {
+.form-group input {
     width: 100%;
-    padding: 15px;
+    padding: 12px; /* Уменьшен отступ внутри поля ввода */
     border: 1px solid #ccc;
     border-radius: 8px;
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-.form-group input:focus, .form-group textarea:focus {
+.form-group input:focus {
     border-color: #ff5733;
     outline: none;
     box-shadow: 0 0 8px rgba(255, 87, 51, 0.3);
@@ -301,11 +301,11 @@ footer {
 
 .forgot-password {
     display: block;
-    margin-top: 10px;
+    margin-top: 5px; /* Уменьшен отступ сверху */
     color: #ff5733;
     text-decoration: none;
     text-align: center;
-    font-size: 14px;
+    font-size: 12px; /* Уменьшен размер шрифта */
 }
 
 .forgot-password:hover {
@@ -314,10 +314,10 @@ footer {
 
 .btn-primary, .btn-secondary {
     width: 100%;
-    padding: 15px;
+    padding: 12px; /* Уменьшен отступ внутри кнопок */
     border: none;
     border-radius: 8px;
-    font-size: 18px;
+    font-size: 16px; /* Уменьшен размер шрифта */
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
@@ -342,77 +342,21 @@ footer {
 
 /* Медиазапросы для мобильных устройств */
 @media (max-width: 768px) {
-    .logo {
-        font-size: 28px;
-    }
-
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .hero {
-        height: 300px;
-    }
-
-    .hero-content h1 {
-        font-size: 36px;
-    }
-
-    .hero-content p {
-        font-size: 20px;
-    }
-
     .category-card {
-        flex: 1 1 calc(50% - 20px);
+        flex: 1 1 calc(100% - 15px); /* Изменен размер карточек для узких экранов */
     }
-
+    
     .game {
-        width: 100%;
+        max-width: 100%;
     }
 }
 
 @media (max-width: 480px) {
-    .logo {
-        font-size: 24px;
-    }
-
-    nav ul {
-        padding: 0;
-    }
-
-    .hero {
-        height: 250px;
-    }
-
     .hero-content h1 {
-        font-size: 28px;
+        font-size: 24px; /* Уменьшен размер шрифта для очень узких экранов */
     }
 
     .hero-content p {
-        font-size: 18px;
-    }
-
-    .form-container {
-        padding: 20px;
-    }
-
-    .form-container h2 {
-        font-size: 24px;
-    }
-
-    .category-card {
-        flex: 1 1 100%;
-    }
-
-    .game {
-        width: 100%;
-    }
-
-    .social-icons img {
-        width: 24px;
+        font-size: 16px; /* Уменьшен размер шрифта для очень узких экранов */
     }
 }
